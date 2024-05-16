@@ -1,0 +1,36 @@
+/* @theme acceis */
+
+@import 'uncover';
+
+:root.invert {
+  /*--color-background: #ddd;
+  --color-background-code: #ccc;
+  --color-background-paginate: rgba(128, 128, 128, 0.05);
+  --color-foreground: #345;
+  --color-highlight: #99c;
+  --color-highlight-hover: #aaf;
+  --color-highlight-heading: #99c;
+  --color-header: #bbb;
+  --color-header-shadow: transparent;*/
+}
+
+:root.invert h1,h2,h3,h4,h5,h6 {
+  color: #ec1d25;
+}
+
+:root.invert a {
+  color: #ec1d24be;
+}
+
+:root ul, :root.invert ul {
+  list-style-type: none;
+}
+
+:root ul li::before, :root.invert ul li::before {
+  content: "\2691";
+  color: red;
+  /*font-weight: bold;*/
+  display: inline-block;
+  width: 1em; 
+  margin-left: -1em;
+}

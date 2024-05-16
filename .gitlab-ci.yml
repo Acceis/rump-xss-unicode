@@ -1,0 +1,21 @@
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: node:19-alpine
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    #- yarn config set unsafe-perm true
+    - yarn global add @marp-team/marp-cli
+    - marp --theme-set themes --input-dir docs
+    - mkdir -p public
+    - cp docs/slides.html public/index.html
+    - cp -r docs/themes/ docs/assets/ public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
