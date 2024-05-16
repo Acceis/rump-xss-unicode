@@ -13,7 +13,7 @@ pages:
     - marp --theme-set themes --input-dir docs
     - mkdir -p public
     - cp docs/slides.html public/index.html
-    - cp -r docs/themes/ docs/assets/ public/
+    - cp -r docs/themes/ public/
   artifacts:
     paths:
       - public
